@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:type="MailApp">
+  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <!-- A unique GUID goes here. You can generate one using PowerShell or an online GUID generator. -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>YourCompany</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Bit By Bit IT Help" />
+  <Description DefaultValue="Click to open IT support info" />
+  <IconUrl DefaultValue="https://yourcompany.com/help-icon.png" />
+  
+  <!-- Permissions: 'ReadItem' is enough if we only need to display info in the task pane. -->
+  <Permissions>ReadItem</Permissions>
+
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+
+  <FormSettings>
+    <!-- We want our button to show up in the message read form (i.e., when reading an email). -->
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://yourcompany.com/help-info.html" />
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <!-- A simple command for the message read surface -->
+  <ExtensionPoint xsi:type="MessageReadCommandSurface">
+    <OfficeTab id="TabDefault">
+      <Group id="msgReadGroup">
+        <Label resid="groupLabel" />
+        <Icon>
+          <bt:Image size="16" resid="icon16"/>
+          <bt:Image size="32" resid="icon32"/>
+          <bt:Image size="80" resid="icon80"/>
+        </Icon>
+        <Control xsi:type="Button" id="msgReadButton">
+          <Label resid="buttonLabel" />
+          <Supertip>
+            <Title resid="buttonLabel"/>
+            <Description resid="buttonDescription"/>
+          </Supertip>
+          <Icon>
+            <bt:Image size="16" resid="icon16"/>
+            <bt:Image size="32" resid="icon32"/>
+            <bt:Image size="80" resid="icon80"/>
+          </Icon>
+          <Action xsi:type="ShowTaskpane">
+            <!-- Task pane URL is inherited from the FormSettings above. -->
+            <SourceLocation resid="readPaneUrl" />
+            <Title resid="paneTitle"/>
+          </Action>
+        </Control>
+      </Group>
+    </OfficeTab>
+  </ExtensionPoint>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:type="VersionOverridesV1_0">
+    <Resources>
+      <bt:Images>
+        <!-- You can point these to the same icon if you want, or different sizes. -->
+        <bt:Image id="icon16" DefaultValue="https://yourcompany.com/help-icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://yourcompany.com/help-icon32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://yourcompany.com/help-icon80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <!-- The side pane content -->
+        <bt:Url id="readPaneUrl" DefaultValue="https://yourcompany.com/help-info.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="IT Help"/>
+        <bt:String id="buttonLabel" DefaultValue="Help / Support"/>
+        <bt:String id="paneTitle" DefaultValue="YourCompany IT Help"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="buttonDescription" DefaultValue="Open IT support information"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
