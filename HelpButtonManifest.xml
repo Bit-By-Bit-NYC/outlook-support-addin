@@ -23,7 +23,7 @@
     <!-- We want our button to show up in the message read form (i.e., when reading an email). -->
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://yourcompany.com/help-info.html" />
+        <SourceLocation DefaultValue="https://github.com/Bit-By-Bit-NYC/outlook-support-addin/blob/main/support.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -72,7 +72,7 @@
       </bt:Images>
       <bt:Urls>
         <!-- The side pane content -->
-        <bt:Url id="readPaneUrl" DefaultValue="https://yourcompany.com/help-info.html"/>
+        <bt:Url id="readPaneUrl" DefaultValue="https://github.com/Bit-By-Bit-NYC/outlook-support-addin/blob/main/support.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="IT Help"/>
