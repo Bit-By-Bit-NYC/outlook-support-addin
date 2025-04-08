@@ -5,11 +5,12 @@
   <Id>00000000-0000-0000-0000-000000000000</Id>
   <!-- A unique GUID goes here. You can generate one using PowerShell or an online GUID generator. -->
   <Version>1.0.0.0</Version>
-  <ProviderName>YourCompany</ProviderName>
+  <ProviderName>Bit By Bit Computer Consultants</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Bit By Bit IT Help" />
   <Description DefaultValue="Click to open IT support info" />
-  <IconUrl DefaultValue="https://yourcompany.com/help-icon.png" />
+  <IconUrl DefaultValue="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVR4nMWSsRHCMBRDn2EBehruzALULEZF654F0qVhAnpmoAqziMIk+Wf75+AoUCnpy9+24N8IniBJzzDLUSKEUPlX3vCnfBXQMkVDeeGTKEld1wnQGhRBwFEF3GFruIFCDrh4ngmD0d/UBnhsc8DOHjSAhszPvzASI3rgDFyBg3Plvf3FxgbN4HKDpTc4Abob41cPmVKSDfCGq2ZZcWxiLA6zjayK1KqrrXSpN6vcClnif8IL49XRsQ5ypdoAAAAASUVORK5CYII="/>
+  
   
   <!-- Permissions: 'ReadItem' is enough if we only need to display info in the task pane. -->
   <Permissions>ReadItem</Permissions>
@@ -65,9 +66,9 @@
     <Resources>
       <bt:Images>
         <!-- You can point these to the same icon if you want, or different sizes. -->
-        <bt:Image id="icon16" DefaultValue="https://yourcompany.com/help-icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://yourcompany.com/help-icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://yourcompany.com/help-icon80.png"/>
+      <bt:Image id="icon16" DefaultValue="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtklEQVR4nMWSsRHCMBRDn2EBehruzALULEZF654F0qVhAnpmoAqziMIk+Wf75+AoUCnpy9+24N8IniBJzzDLUSKEUPlX3vCnfBXQMkVDeeGTKEld1wnQGhRBwFEF3GFruIFCDrh4ngmD0d/UBnhsc8DOHjSAhszPvzASI3rgDFyBg3Plvf3FxgbN4HKDpTc4Abob41cPmVKSDfCGq2ZZcWxiLA6zjayK1KqrrXSpN6vcClnif8IL49XRsQ5ypdoAAAAASUVORK5CYII="/>
+      <bt:Image id="icon32" DefaultValue="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABfklEQVR4nO2Wr07EQBDGfyUn7wUO5DW5BAkC0QdAlgSJ5xWwJIgq9CkkPAO271EsRRMsDKK3pO3u7J9SFPclTZPd+Wa+2ZlOF/b478imkEREXjKbuhYhyxwbHixSA8faxAqJEhATeKqQg7mCrxWzEN8rYErmqX5UAaHgWsap/oIl0DCubWr3eyEK2raVqqoEqIG3BcgK5AIE2Pi4Br8SUJal0AVzPe/AcUjE5OA78ha4A06A5TPI4VDEQ6QfHY3C1WwvhwJqXzINSNPZ/cA5iFxjtgHJR6M7h+UKPnpLr8ZW8zOGZTFWqOETuGaY8iNwFsHtJ5L0GeaQmWcD23q4fXO120vxaSGyB84Z1v7e5SumB4IkRcSTCZ53b+skY78Ci+ibaD3ykVk77V5fip0Fa4IGAnmd9I/T1D6Wa+BswtBcL4rCHD+3E4QHBUxBKLgGVcCsfzePv2AQLbPxlPPdD3zJBEsQexLa2A3xoy6lxklKnWe9FacImbt39vhzfAOWU8hplnRndwAAAABJRU5ErkJggg=="/>
+      <bt:Image id="icon80" DefaultValue="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAEJElEQVR4nO2cvWsUQRiHnzWipPCDBAMKIujpgaSyiCL4ByiCEEEhoI1lsLGzFSsRSyvtbfwoBC2iIoKggp2Q4iyM2FirEEXXYm+Pzbq787HvzM6d80Ag5GZ3fu9v39nZeXcuEIlEIpFIJBL5H0m6FlBkAKlu214g2jd32XmapiPDPiZmfhSPBUgSwxMI4d3AcuAuzuvTzE2+OkqH1H1+QNBXVV+SOM9AX4E09e0yI51mYJfmFXGpw0kGujbOZri7ykbxDAwl6+qQ1idqYFtxkhNJE5ImihkYeuaVkdIrYuC4mZcjobu1gb7Nkx7mbfW3MnBcM69MmzisDZwU83Js4/G2lNPF10wshZWBk5Z9OTZxGRs4qeblmMYXzBBOCtS16W1sFkRB1chAF9nXxgxXRprE2WlFehj8NHAcOAHMA/0F4BtZfX8bsB3Ynx1yHVgBXlIo/ydJkgR/a0kFAWaBS8BTYJ3MDJOfNWCZihEkrDM8A4ene2RhWtXPG2CXY62NBDOJWLIAPAd2dCVAy0Ddq6HC0cw5D1xz0Y9O3N4y0PFjxzIw57G/EaEM4a/AHeA8cIhs8p15CJwDptTHTwGn3clriYOb8SOySeAtsARsqep3AOkA0ht6E8ptT9o3oEzz8nYLm8V+xXC6RWbePd2+e/AZ2NvQ/AFwtvxH0/t31Q6Jpm0kxg/SdVswDI29YtJ4GMArmg00isV0K4lIp03UCRLaBJQwWozU8qXywCRJTDYtmeJ8KVcl3sLUU8AeRZsPLo2qw/ge6JIqY99DegQ+AfvqjpsCXpOtD33pyum0mFCmfLG+AxezX2vNgyw9XZmnIigDS1d6BnhCtlyrZSdw1aEmFZ0MYY174BzwjGyZ1sQvsgRcAXe3m06HsMWEMQu8AA4r2v0GLjA0r6mvsZiF654DU0gN1qVbgceozftJtoK5rzph3YN0Z8+Bjl873gSOKdr8AM5QyDwb6uIwNVartely6J9O9DLwILBKc4FjHThJNsS1cK3dSzVGM4gl1Hou49E8HUIpZwEcVXy+Btz1IcQEr7v0FU12Kz5/B/wR7E8ELQM9lcinm45drChVWfajjU7c2sb4FAXtihA+tXq/B7oeWr6Gbo62gZIvaVTlcpuVg24JXhfdeDv/smFB6CrQB+hVtF1UnEdamy5GQ9jVRh5bA6SzLsckzmCeA/v9fl/VZlB6yeZDlwpjA0PZl+cK0/isMnBSTbSJK5ghPK5YGzhpWWgbT6sMnBQT28ThbRuYLjoFTcmibtskELkHjmsmSugWm0TGzUQpvaKzcFtRUi96VEhebPHHmNAzMfj/mQDuvgCTY5OprjQ5fZAOJRtd6nBezsrFd7H493EBvdUDVUZKTiA+M997QbUYXBcVZGlC+LLhCJNSfij310gkEolEIpEx5S/i6lvnXeoR0gAAAABJRU5ErkJggg=="/>
       </bt:Images>
       <bt:Urls>
         <!-- The side pane content -->
@@ -76,7 +77,7 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="IT Help"/>
         <bt:String id="buttonLabel" DefaultValue="Help / Support"/>
-        <bt:String id="paneTitle" DefaultValue="YourCompany IT Help"/>
+        <bt:String id="paneTitle" DefaultValue="Bit By Bit IT Help"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="buttonDescription" DefaultValue="Open IT support information"/>
